@@ -25,7 +25,7 @@
     <text class="value" x="446" y="74" font-size="13.5" font-weight="600" text-anchor="end">0</text>
     <circle cx="34" cy="96" r="3" fill="#d9a441"/>
     <text class="label" x="50" y="100" font-size="13.5">Commits (past year)</text>
-    <text class="value" x="446" y="100" font-size="13.5" font-weight="600" text-anchor="end">75</text>
+    <text class="value" x="446" y="100" font-size="13.5" font-weight="600" text-anchor="end">93</text>
     <circle cx="34" cy="122" r="3" fill="#d9a441"/>
     <text class="label" x="50" y="126" font-size="13.5">Pull requests</text>
     <text class="value" x="446" y="126" font-size="13.5" font-weight="600" text-anchor="end">2</text>
@@ -37,5 +37,5 @@
     <text class="value" x="446" y="178" font-size="13.5" font-weight="600" text-anchor="end">1</text>
     <circle cx="34" cy="200" r="3" fill="#d9a441"/>
     <text class="label" x="50" y="204" font-size="13.5">Public repositories</text>
-    <text class="value" x="446" y="204" font-size="13.5" font-weight="600" text-anchor="end">4</text>
+    <text class="value" x="446" y="204" font-size="13.5" font-weight="600" text-anchor="end">7</text>
 </svg>
