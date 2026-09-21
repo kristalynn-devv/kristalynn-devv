@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/header.svg" alt="Kristalyn Narongpiyawathana — Full-Stack Developer" width="880"/>
+  <img src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/header.svg" alt="Kristalyn Narongpiyawathana, Full-Stack Developer" width="880"/>
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/now.svg" alt="now" width="720"/>
@@ -27,33 +27,33 @@ Full-stack developer in Thailand. I spent about three years on the core transact
 pawnshop and lending business, used day to day across its branches. Most of what I know I picked
 up there, usually by getting something wrong first and having to understand why.
 
-## What I work on
+## 🏦 What I work on
 
 Money-handling flows and what attaches to them: appraisal, quotations, pawning, interest renewals,
-redemptions, payments, permissions. Alongside that, a fair amount of integration work —
-fingerprint scanners, Thai national-ID card readers, OCR — and security findings that had to be
+redemptions, payments, permissions. Alongside that, a fair amount of integration work:
+fingerprint scanners, Thai national-ID card readers, OCR, plus security findings that had to be
 cleared before a release went out.
 
-## Stack
+## 🧱 Stack
 
 Every day:
 
-- **Vue + Nuxt + Pinia** — where most of my hours have gone; Vuetify on the internal screens
-- **Node and PHP** — REST, Socket.io for the screens that cannot wait for a refresh
-- **PostgreSQL / MSSQL** — schema first, and I usually try fixing the model before adding a join
+- **Vue + Nuxt + Pinia**: where most of my hours have gone; Vuetify on the internal screens
+- **Node and PHP**: REST, Socket.io for the screens that cannot wait for a refresh
+- **PostgreSQL / MSSQL**: schema first, and I usually try fixing the model before adding a join
 
 Regularly:
 
 - **Supabase** for RLS and RPC, so authorization sits in the database rather than in the client
 - **TypeScript + Next.js** on everything new I start
 - **Playwright** for the few flows that would cost something real if they broke
-- **Google Maps API, face-api, OCR, smart card SDKs** — integration work where the docs stop early
+- **Google Maps API, face-api, OCR, smart card SDKs**: integration work where the docs stop early
 
 Just starting:
 
-- **Dart + Flutter** — early days. Coming from years of Vue, the widget tree and explicit state rebuilds are the part I am still rewiring my instincts around.
+- **Dart + Flutter**: early days. Coming from years of Vue, the widget tree and explicit state rebuilds are the part I am still rewiring my instincts around.
 
-## Skills
+## 🗂️ Skills
 
 Same grouping as my [CV](https://resume.krista-lyn.com), so the two cannot drift apart.
 
@@ -70,7 +70,7 @@ Same grouping as my [CV](https://resume.krista-lyn.com), so the two cannot drift
 Nothing here carries a self-assigned rating. Anything I only know at a basic level sits under
 **Familiar**, where the label says so.
 
-## Security, specifically
+## 🔒 Security, specifically
 
 - Worked through the reported penetration-test findings until the list was clear: SQL injection,
   clickjacking, OTP brute-force, unsafe file upload
@@ -78,24 +78,24 @@ Nothing here carries a self-assigned rating. Anything I only know at a basic lev
 - File upload is the endpoint I am most careful with
 - I try to keep permission checks in one place; hiding a button in the UI is not a check
 
-## Projects
+## 📦 Projects
 
 ### [ai-news](https://github.com/kristalynn-devv/ai-news)
 
-A Thai AI news daily with the editorial back office attached — review queue, draft editor, and
+A Thai AI news daily with the editorial back office attached: review queue, draft editor, and
 approvals that stay immutable and still auditable. Next.js and Supabase, with authorization in
 RLS and the editor workflow in RPCs. Unit tests, PostgreSQL contract tests, and Playwright.
 
 ### [LockGo](https://github.com/kristalynn-devv/LockGo)
 
-Search and reserve a smart locker ahead of arrival — customer flow and admin console, React 19 +
+Search and reserve a smart locker ahead of arrival. Customer flow and admin console, React 19 +
 Vite against a NestJS API on Supabase. Reservation and payment both run as Postgres functions so the
-compartment lock and the insert stay together, and Realtime carries no payload — it signals that
+compartment lock and the insert stay together, and Realtime carries no payload: it signals that
 something changed and the client refetches.
 
 ### [PyPath](https://github.com/kristalynn-devv/python-ai-course)
 
-A Thai-language course taking Python from first syntax through to AI engineering — 5 courses,
+A Thai-language course taking Python from first syntax through to AI engineering: 5 courses,
 40 lessons, with an adaptive coach that reads your first pass at an assessment bank and tells you
 where to start. No accounts and no backend; progress stays in the learner's browser. A Python
 script lints and runs every code sample, so the examples in the lessons are known to work.
@@ -112,31 +112,31 @@ Net worth, budget, debt, retirement, tax and a health score, built out of a spre
 maintaining by hand. Astro with React only where a page is genuinely interactive. Every table is
 row-level-secured to its owner, so a mistake in a component cannot surface someone else's data.
 
-## Tools I wrote
+## 🛠️ Tools I wrote
 
 ### [leancode](https://github.com/kristalynn-devv/leancode)
 
 The coding workflow below, written down as a skill I actually run. Nine steps from "the decisions
 are settled" to a report that can be checked, and an audit step that re-reads the session rather
-than the diff — a step that was skipped leaves nothing in a diff to see. Its rules never change
+than the diff, because a step that was skipped leaves nothing in a diff to see. Its rules never change
 mid-task: observations go to an append-only log, and promoting one into a rule takes a human and a
 named replacement.
 
-## How I work
+## 🧭 How I work
 
 - I write the spec first. If I cannot turn a ticket into a decision, it is usually not ready to build.
 - I look for something to reuse before adding a file; often the thing already exists.
-- I try not to call a change done until I have verified it — a test, or a run of the real thing.
+- I try not to call a change done until I have verified it, with a test or a run of the real thing.
 - Agents do a lot of the typing. Deciding what should exist is the part I keep for myself.
 - I read the source in `node_modules` rather than trust what a blog post said the API was.
 - I leave a handoff note, because the next session usually starts colder than I expect.
 
-None of that is aspiration — it is [leancode](https://github.com/kristalynn-devv/leancode), and it
+None of that is aspiration. It is [leancode](https://github.com/kristalynn-devv/leancode), and it
 keeps a log of the times it failed me.
 
-## Currently
+## 🌱 Currently
 
-- Wiring **ai-news** from ingestion to approved article — the hard part is the review queue,
+- Wiring **ai-news** from ingestion to approved article. The hard part is the review queue,
   where an approval has to be immutable and still auditable
 - Learning **Dart and Flutter** from scratch. Coming from Vue, the thing I keep getting wrong is
   assuming state updates are reactive rather than a rebuild I asked for
@@ -144,13 +144,13 @@ keeps a log of the times it failed me.
   keeping RLS as the authorization boundary instead of the client
 - Planning anything larger than a session as a map of decision tickets before opening an editor
 
-## Background
+## 🎓 Background
 
-**B.Sc. Computer Science, First-Class Honors (GPA 3.71)** — Valaya Alongkorn Rajabhat University. A weekend program, finished while working full-time as a building technician at the same company I later joined as a developer.
+**B.Sc. Computer Science, First-Class Honors (GPA 3.71)**, Valaya Alongkorn Rajabhat University. A weekend program, finished while working full-time as a building technician at the same company I later joined as a developer.
 
-**IT Passport Examination (IP)** — Career for the Future Academy × IPA Japan, 2021.
+**IT Passport Examination (IP)**, Career for the Future Academy × IPA Japan, 2021.
 
-## Languages
+## 📊 Languages
 
 <p align="center">
   <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/top-langs.svg" alt="Top languages"/>
@@ -159,7 +159,7 @@ keeps a log of the times it failed me.
 <sub>Rendered nightly by <a href="./.github/workflows/stats.yml">a GitHub Action</a> onto a separate
 <code>stats</code> branch.</sub>
 
-## Contact
+## ✉️ Contact
 
 Full CV at **[resume.krista-lyn.com](https://resume.krista-lyn.com)**.
 
