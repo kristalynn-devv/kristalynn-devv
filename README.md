@@ -17,6 +17,10 @@
   <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white" height="22"/>
 </p>
 
+<p align="center">
+  <a href="https://resume.krista-lyn.com"><img src="https://img.shields.io/badge/R%C3%A9sum%C3%A9-resume.krista--lyn.com-d9a441?style=flat&logo=readme&logoColor=white" height="22"/></a>
+</p>
+
 ---
 
 Full-stack developer in Thailand. For three years I worked on the core transaction system of a pawnshop and lending business — 100 branches, 33 provinces, somewhere between 150,000 and 200,000 transactions a month. Most of what I know about software I learned from systems where a bug means a branch stops taking customers.
@@ -136,6 +140,8 @@ as plain SVG — the profile page calls nothing at render time.</sub>
 
 ## Contact
 
+Full CV at **[resume.krista-lyn.com](https://resume.krista-lyn.com)**.
+
 Issues and discussions on any repo above, or:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-kristalyn--n-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/kristalyn-n)
@@ -145,4 +151,4 @@ Or plainly: **k.narongpiyawathana@gmail.com**
 
 ---
 
-Pathum Thani, Thailand · UTC+7 · [github.com/kristalynn-devv](https://github.com/kristalynn-devv)
+Pathum Thani, Thailand · UTC+7 · [resume.krista-lyn.com](https://resume.krista-lyn.com) · [github.com/kristalynn-devv](https://github.com/kristalynn-devv)
