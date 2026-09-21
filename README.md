@@ -54,12 +54,12 @@ Same grouping as my [CV](https://resume.krista-lyn.com), so the two cannot drift
 
 | | |
 | --- | --- |
-| **Frontend** | JavaScript · HTML & CSS · Vue.js · Nuxt · Vuetify · Pinia · Tailwind CSS |
-| **Backend** | PHP · Node.js · REST API · Socket.io · PostgreSQL · MSSQL |
+| **Frontend** | JavaScript · TypeScript · HTML & CSS · Vue.js · Nuxt · Vuetify · Pinia · React · Next.js · Tailwind CSS |
+| **Backend** | PHP · Node.js · NestJS · REST API · Socket.io · PostgreSQL · MSSQL |
 | **Integration** | Google Maps API · Face-api |
 | **No-Code** | AppSheet · Google Apps Script · Google Sheets |
 | **Tools** | Git · GitHub · GitLab · CI/CD · Claude · Cursor |
-| **Familiar** | TypeScript · React · Next.js · NestJS · Java · C# |
+| **Familiar** | Java · C# |
 | **Learning** | Dart · Flutter |
 
 Nothing here carries a self-assigned rating. Anything I only know at a basic level sits under
