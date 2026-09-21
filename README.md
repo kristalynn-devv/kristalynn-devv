@@ -92,14 +92,6 @@ maintaining by hand. Astro with React only where a page is genuinely interactive
 row-level-secured to its owner — a bug in a component should not be able to show you someone
 else's balance sheet.
 
-### Not public
-
-- **family-care** — coordinating care for a relative across a family. Tasks append to their own
-  history instead of overwriting a status, since the argument is never about what the task is —
-  it is about who said they would do it and when that changed.
-- **fixly** — QR-based facility repair reporting. Scan, report, track, confirm, with no account
-  anywhere in that path, because requiring one is how these systems end up unused.
-
 ## How I work
 
 - Write the spec before the code. A ticket that cannot be resolved into a decision is not ready to build.
