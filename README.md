@@ -143,12 +143,10 @@ row-level-secured to its owner, so a mistake in a component cannot surface someo
   <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/stats.svg" alt="GitHub stats"/>
   <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/top-langs.svg" alt="Top languages"/>
 </p>
-<p align="center">
-  <img width="880" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/activity.svg" alt="Contribution activity"/>
-</p>
 
 <sub>Rendered nightly by <a href="./.github/workflows/stats.yml">a GitHub Action</a> onto a separate
-<code>stats</code> branch, so the cards stay static without adding a commit here every night.</sub>
+<code>stats</code> branch. The contribution graph is GitHub's own, just below — no point drawing a
+second one.</sub>
 
 ## Contact
 

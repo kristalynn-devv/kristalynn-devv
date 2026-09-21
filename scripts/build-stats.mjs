@@ -11,7 +11,7 @@
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { fetchUser, renderStats, renderTopLangs, renderActivity, DEFAULT_ACCENT } from "./render.mjs";
+import { fetchUser, renderStats, renderTopLangs, DEFAULT_ACCENT } from "./render.mjs";
 
 const ASSETS = join(dirname(fileURLToPath(import.meta.url)), "..", "assets");
 
@@ -29,7 +29,6 @@ const user = await fetchUser(username, token);
 const cards = {
   "stats.svg": renderStats(user, accent),
   "top-langs.svg": renderTopLangs(user, accent),
-  "activity.svg": renderActivity(user, accent, 52),
 };
 
 await mkdir(ASSETS, { recursive: true });
