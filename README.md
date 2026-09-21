@@ -53,21 +53,42 @@ Just starting:
 
 ## Selected projects
 
-### [ai-news](https://github.com/kristalynn-devv/ai-news)
-
-A Thai-language AI news daily with the editorial back office attached — draft, review queue, approval, and an immutable revision history. Next.js, Tailwind 4, Supabase with RLS and RPC for the editor workflow, unit tests, PostgreSQL contract tests, and Playwright. Static export, so the reading side costs nothing to host.
-
 ### [LockGo](https://github.com/kristalynn-devv/LockGo)
 
-Search and reserve a smart locker before you arrive. A pnpm monorepo built from a locked requirements document — the interesting part is reservation conflict under concurrency, not the UI.
+Search and reserve a smart locker ahead of arrival — customer flow and admin console, React 19 +
+Vite against a NestJS API on Supabase. Reservation and payment both run as Postgres functions, so
+the compartment lock and the insert cannot drift apart, and Realtime carries no payload: it says
+something changed and the client refetches. A message that carries state is a second source of
+truth waiting to disagree with the first.
 
-### personal-finance
+### [PyPath](https://github.com/kristalynn-devv/python-ai-course)
 
-Personal money tracking, written spec-first with Astro and Supabase. Small enough to keep honest, real enough that I use it.
+A Thai-language course taking Python from first syntax through to AI engineering — 5 courses,
+40 lessons, with an adaptive coach that reads your first pass at an assessment bank and tells you
+where to start. No accounts and no backend; progress stays in the learner's browser. A Python
+script lints and actually runs every code sample, because examples that do not run are worse
+than none.
 
-### family-care
+### [personal-finance](https://github.com/kristalynn-devv/personal-finance)
 
-Care coordination for a family, currently still in research and system design. Two PRD revisions and two system-design revisions before a line of application code — deliberately.
+Net worth, budget, debt, retirement, tax and a health score, built out of a spreadsheet I was
+maintaining by hand. Astro with React only where a page is genuinely interactive. Every table is
+row-level-secured to its owner — a bug in a component should not be able to show you someone
+else's balance sheet.
+
+### Private work
+
+- **ai-news** — a Thai AI news daily with the editorial back office attached: review queue, draft
+  editor, and approvals that stay immutable and still auditable. Next.js, Supabase RLS and RPC,
+  unit + Postgres contract + Playwright tests.
+- **poc-pricetrends** — price extraction where the site has no API. Playwright screenshots the
+  page, Gemini reads it against a per-category schema. Selector-based scrapers break quietly and
+  keep returning plausible nonsense; this fails loudly and survives a redesign.
+- **fixly** — QR-based facility repair reporting. Scan, report, track, confirm, with no account
+  anywhere in that path, because requiring one is how these systems end up unused.
+- **family-care** — coordinating care for a relative across a family. Tasks append to their own
+  history instead of overwriting a status, since the argument is never about what the task is —
+  it is about who said they would do it and when that changed.
 
 ## How I work
 
