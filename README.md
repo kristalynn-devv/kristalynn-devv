@@ -112,6 +112,14 @@ Net worth, budget, debt, retirement, tax and a health score, built out of a spre
 maintaining by hand. Astro with React only where a page is genuinely interactive. Every table is
 row-level-secured to its owner, so a mistake in a component cannot surface someone else's data.
 
+### [leancode](https://github.com/kristalynn-devv/leancode)
+
+The coding workflow below, written down as a skill I actually run. Nine steps from "the decisions
+are settled" to a report that can be checked, and an audit step that re-reads the session rather
+than the diff — a step that was skipped leaves nothing in a diff to see. Its rules never change
+mid-task: observations go to an append-only log, and promoting one into a rule takes a human and a
+named replacement.
+
 ## How I work
 
 - I write the spec first. If I cannot turn a ticket into a decision, it is usually not ready to build.
@@ -120,6 +128,9 @@ row-level-secured to its owner, so a mistake in a component cannot surface someo
 - Agents do a lot of the typing. Deciding what should exist is the part I keep for myself.
 - I read the source in `node_modules` rather than trust what a blog post said the API was.
 - I leave a handoff note, because the next session usually starts colder than I expect.
+
+None of that is aspiration — it is [leancode](https://github.com/kristalynn-devv/leancode), and it
+keeps a log of the times it failed me.
 
 ## Currently
 
