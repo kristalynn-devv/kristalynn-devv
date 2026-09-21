@@ -78,7 +78,7 @@ Nothing here carries a self-assigned rating. Anything I only know at a basic lev
 - File upload is the endpoint I am most careful with
 - I try to keep permission checks in one place; hiding a button in the UI is not a check
 
-## Selected projects
+## Projects
 
 ### [ai-news](https://github.com/kristalynn-devv/ai-news)
 
@@ -111,6 +111,8 @@ reading a screenshot against a schema held up better than selectors did.
 Net worth, budget, debt, retirement, tax and a health score, built out of a spreadsheet I was
 maintaining by hand. Astro with React only where a page is genuinely interactive. Every table is
 row-level-secured to its owner, so a mistake in a component cannot surface someone else's data.
+
+## Tools I wrote
 
 ### [leancode](https://github.com/kristalynn-devv/leancode)
 
