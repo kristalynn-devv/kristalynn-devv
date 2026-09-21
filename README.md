@@ -53,6 +53,12 @@ Just starting:
 
 ## Selected projects
 
+### [ai-news](https://github.com/kristalynn-devv/ai-news)
+
+A Thai AI news daily with the editorial back office attached — review queue, draft editor, and
+approvals that stay immutable and still auditable. Next.js and Supabase, with authorization in
+RLS and the editor workflow in RPCs. Unit tests, PostgreSQL contract tests, and Playwright.
+
 ### [LockGo](https://github.com/kristalynn-devv/LockGo)
 
 Search and reserve a smart locker ahead of arrival — customer flow and admin console, React 19 +
@@ -69,6 +75,12 @@ where to start. No accounts and no backend; progress stays in the learner's brow
 script lints and actually runs every code sample, because examples that do not run are worse
 than none.
 
+### [poc-pricetrends](https://github.com/kristalynn-devv/poc-pricetrends)
+
+Price extraction where the site has no API. Playwright screenshots the page, Gemini reads the
+image against a per-category schema. Selector-based scrapers break quietly and keep returning
+plausible nonsense; a screenshot plus a bound schema fails loudly and survives a redesign.
+
 ### [personal-finance](https://github.com/kristalynn-devv/personal-finance)
 
 Net worth, budget, debt, retirement, tax and a health score, built out of a spreadsheet I was
@@ -76,19 +88,13 @@ maintaining by hand. Astro with React only where a page is genuinely interactive
 row-level-secured to its owner — a bug in a component should not be able to show you someone
 else's balance sheet.
 
-### Private work
+### Not public
 
-- **ai-news** — a Thai AI news daily with the editorial back office attached: review queue, draft
-  editor, and approvals that stay immutable and still auditable. Next.js, Supabase RLS and RPC,
-  unit + Postgres contract + Playwright tests.
-- **poc-pricetrends** — price extraction where the site has no API. Playwright screenshots the
-  page, Gemini reads it against a per-category schema. Selector-based scrapers break quietly and
-  keep returning plausible nonsense; this fails loudly and survives a redesign.
-- **fixly** — QR-based facility repair reporting. Scan, report, track, confirm, with no account
-  anywhere in that path, because requiring one is how these systems end up unused.
 - **family-care** — coordinating care for a relative across a family. Tasks append to their own
   history instead of overwriting a status, since the argument is never about what the task is —
   it is about who said they would do it and when that changed.
+- **fixly** — QR-based facility repair reporting. Scan, report, track, confirm, with no account
+  anywhere in that path, because requiring one is how these systems end up unused.
 
 ## How I work
 
