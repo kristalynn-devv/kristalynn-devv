@@ -23,25 +23,30 @@
 
 ---
 
-Full-stack developer in Thailand. For three years I worked on the core transaction system of a pawnshop and lending business — 100 branches, 33 provinces, somewhere between 150,000 and 200,000 transactions a month. Most of what I know about software I learned from systems where a bug means a branch stops taking customers.
+Full-stack developer in Thailand. I spent about three years on the core transaction system of a
+pawnshop and lending business, used day to day across its branches. Most of what I know I picked
+up there, usually by getting something wrong first and having to understand why.
 
 ## What I work on
 
-Money-handling flows and the things attached to them: appraisal, quotations, pawning, interest renewals, redemptions, payments, permissions. Plus the parts nobody volunteers for — fingerprint scanners, Thai national-ID card readers, OCR, and penetration-test findings that have to reach zero before the release goes out.
+Money-handling flows and what attaches to them: appraisal, quotations, pawning, interest renewals,
+redemptions, payments, permissions. Alongside that, a fair amount of integration work —
+fingerprint scanners, Thai national-ID card readers, OCR — and security findings that had to be
+cleared before a release went out.
 
 ## Stack
 
 Every day:
 
-- **Vue + Nuxt + Pinia** — years of it, Vuetify for the enterprise screens where consistency beats craft
+- **Vue + Nuxt + Pinia** — where most of my hours have gone; Vuetify on the internal screens
 - **Node and PHP** — REST, Socket.io for the screens that cannot wait for a refresh
-- **PostgreSQL / MSSQL** — schema first, and I would rather fix the model than add a third join
+- **PostgreSQL / MSSQL** — schema first, and I usually try fixing the model before adding a join
 
 Regularly:
 
-- **Supabase** for RLS and RPC, so authorization lives in the database and not in four client branches
+- **Supabase** for RLS and RPC, so authorization sits in the database rather than in the client
 - **TypeScript + Next.js** on everything new I start
-- **Playwright** for the handful of flows that cost real money when they break
+- **Playwright** for the few flows that would cost something real if they broke
 - **Google Maps API, face-api, OCR, smart card SDKs** — integration work where the docs stop early
 
 Just starting:
@@ -54,12 +59,12 @@ Same grouping as my [CV](https://resume.krista-lyn.com), so the two cannot drift
 
 | | |
 | --- | --- |
-| **Frontend** | JavaScript · TypeScript · HTML & CSS · Vue.js · Nuxt · Vuetify · Pinia · React · Next.js · Tailwind CSS |
-| **Backend** | PHP · Node.js · NestJS · REST API · Socket.io · PostgreSQL · MSSQL |
+| **Frontend** | JavaScript · HTML & CSS · Vue.js · Nuxt · Vuetify · Pinia · Tailwind CSS |
+| **Backend** | PHP · Node.js · REST API · Socket.io · PostgreSQL · MSSQL |
 | **Integration** | Google Maps API · Face-api |
 | **No-Code** | AppSheet · Google Apps Script · Google Sheets |
 | **Tools** | Git · GitHub · GitLab · CI/CD · Claude · Cursor |
-| **Familiar** | Java · C# |
+| **Familiar** | TypeScript · React · Next.js · NestJS · Java · C# |
 | **Learning** | Dart · Flutter |
 
 Nothing here carries a self-assigned rating. Anything I only know at a basic level sits under
@@ -67,10 +72,11 @@ Nothing here carries a self-assigned rating. Anything I only know at a basic lev
 
 ## Security, specifically
 
-- Closed **100% of reported penetration-test findings**: SQL injection, clickjacking, OTP brute-force, unsafe file upload
-- Rate limiting and lockout on OTP is a product decision, not a backlog item
-- File upload is the endpoint I always assume is already being abused
-- Permissions belong in one place — if the UI is the only thing hiding a button, it is not hidden
+- Worked through the reported penetration-test findings until the list was clear: SQL injection,
+  clickjacking, OTP brute-force, unsafe file upload
+- I treat OTP rate limiting and lockout as part of the feature rather than a follow-up ticket
+- File upload is the endpoint I am most careful with
+- I try to keep permission checks in one place; hiding a button in the UI is not a check
 
 ## Selected projects
 
@@ -83,40 +89,37 @@ RLS and the editor workflow in RPCs. Unit tests, PostgreSQL contract tests, and 
 ### [LockGo](https://github.com/kristalynn-devv/LockGo)
 
 Search and reserve a smart locker ahead of arrival — customer flow and admin console, React 19 +
-Vite against a NestJS API on Supabase. Reservation and payment both run as Postgres functions, so
-the compartment lock and the insert cannot drift apart, and Realtime carries no payload: it says
-something changed and the client refetches. A message that carries state is a second source of
-truth waiting to disagree with the first.
+Vite against a NestJS API on Supabase. Reservation and payment both run as Postgres functions so the
+compartment lock and the insert stay together, and Realtime carries no payload — it signals that
+something changed and the client refetches.
 
 ### [PyPath](https://github.com/kristalynn-devv/python-ai-course)
 
 A Thai-language course taking Python from first syntax through to AI engineering — 5 courses,
 40 lessons, with an adaptive coach that reads your first pass at an assessment bank and tells you
 where to start. No accounts and no backend; progress stays in the learner's browser. A Python
-script lints and actually runs every code sample, because examples that do not run are worse
-than none.
+script lints and runs every code sample, so the examples in the lessons are known to work.
 
 ### [poc-pricetrends](https://github.com/kristalynn-devv/poc-pricetrends)
 
 Price extraction where the site has no API. Playwright screenshots the page, Gemini reads the
-image against a per-category schema. Selector-based scrapers break quietly and keep returning
-plausible nonsense; a screenshot plus a bound schema fails loudly and survives a redesign.
+image against a per-category schema. The sites have no API and their markup changes often, so
+reading a screenshot against a schema held up better than selectors did.
 
 ### [personal-finance](https://github.com/kristalynn-devv/personal-finance)
 
 Net worth, budget, debt, retirement, tax and a health score, built out of a spreadsheet I was
 maintaining by hand. Astro with React only where a page is genuinely interactive. Every table is
-row-level-secured to its owner — a bug in a component should not be able to show you someone
-else's balance sheet.
+row-level-secured to its owner, so a mistake in a component cannot surface someone else's data.
 
 ## How I work
 
-- Write the spec before the code. A ticket that cannot be resolved into a decision is not ready to build.
-- Reuse before you add. Most new files are a duplicate of something already in the repo.
-- If a change cannot be verified, it is not finished — tests, or a run of the real thing.
-- AI agents do the typing. Deciding what should exist is still mine, and I keep that boundary sharp.
-- Read the actual source in `node_modules` before trusting what a blog post said the API was.
-- Leave a handoff note. The next session — mine or someone else's — starts from it.
+- I write the spec first. If I cannot turn a ticket into a decision, it is usually not ready to build.
+- I look for something to reuse before adding a file; often the thing already exists.
+- I try not to call a change done until I have verified it — a test, or a run of the real thing.
+- Agents do a lot of the typing. Deciding what should exist is the part I keep for myself.
+- I read the source in `node_modules` rather than trust what a blog post said the API was.
+- I leave a handoff note, because the next session usually starts colder than I expect.
 
 ## Currently
 
@@ -137,15 +140,15 @@ else's balance sheet.
 ## 📊 Activity
 
 <p align="center">
-  <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/stats.svg" alt="GitHub stats"/>
-  <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/top-langs.svg" alt="Top languages"/>
+  <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/stats.svg" alt="GitHub stats"/>
+  <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/top-langs.svg" alt="Top languages"/>
 </p>
 <p align="center">
-  <img width="880" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/activity.svg" alt="Contribution activity"/>
+  <img width="880" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/activity.svg" alt="Contribution activity"/>
 </p>
 
-<sub>Rendered nightly by <a href="./.github/workflows/stats.yml">a GitHub Action</a> and committed
-as plain SVG — the profile page calls nothing at render time.</sub>
+<sub>Rendered nightly by <a href="./.github/workflows/stats.yml">a GitHub Action</a> onto a separate
+<code>stats</code> branch, so the cards stay static without adding a commit here every night.</sub>
 
 ## Contact
 

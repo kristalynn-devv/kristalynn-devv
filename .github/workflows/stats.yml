@@ -36,14 +36,14 @@ jobs:
           PROFILE_USERNAME: ${{ github.repository_owner }}
         run: node scripts/build-stats.mjs
 
-      - name: Commit if the cards changed
+      - name: Publish the cards to the stats branch
         run: |
-          if [ -z "$(git status --porcelain assets)" ]; then
-            echo "No change, nothing to commit."
-            exit 0
-          fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
-          git commit -m "Update profile stats [skip ci]"
-          git push
+          # An orphan branch force-pushed as a single commit: the generated SVGs get a
+          # home without adding a commit to main's history every night.
+          git checkout -q --orphan stats-build
+          git reset -q
+          git add -f assets/stats.svg assets/top-langs.svg assets/activity.svg
+          git commit -q -m "Profile stats $(date -u +%Y-%m-%d)"
+          git push -f -q origin stats-build:stats
