@@ -137,16 +137,14 @@ row-level-secured to its owner, so a mistake in a component cannot surface someo
 
 **IT Passport Examination (IP)** — Career for the Future Academy × IPA Japan, 2021.
 
-## 📊 Activity
+## 📊 Languages
 
 <p align="center">
-  <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/stats.svg" alt="GitHub stats"/>
   <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/top-langs.svg" alt="Top languages"/>
 </p>
 
 <sub>Rendered nightly by <a href="./.github/workflows/stats.yml">a GitHub Action</a> onto a separate
-<code>stats</code> branch. The contribution graph is GitHub's own, just below — no point drawing a
-second one.</sub>
+<code>stats</code> branch.</sub>
 
 ## Contact
 
