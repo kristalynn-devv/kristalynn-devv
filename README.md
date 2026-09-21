@@ -48,6 +48,23 @@ Just starting:
 
 - **Dart + Flutter** — early days. Coming from years of Vue, the widget tree and explicit state rebuilds are the part I am still rewiring my instincts around.
 
+## Skills
+
+Same grouping as my [CV](https://resume.krista-lyn.com), so the two cannot drift apart.
+
+| | |
+| --- | --- |
+| **Frontend** | JavaScript · HTML & CSS · Vue.js · Nuxt · Vuetify · Pinia · Tailwind CSS |
+| **Backend** | PHP · Node.js · REST API · Socket.io · PostgreSQL · MSSQL |
+| **Integration** | Google Maps API · Face-api |
+| **No-Code** | AppSheet · Google Apps Script · Google Sheets |
+| **Tools** | Git · GitHub · GitLab · CI/CD · Claude · Cursor |
+| **Familiar** | TypeScript · React · Next.js · NestJS · Java · C# |
+| **Learning** | Dart · Flutter |
+
+Nothing here carries a self-assigned rating. Anything I only know at a basic level sits under
+**Familiar**, where the label says so.
+
 ## Security, specifically
 
 - Closed **100% of reported penetration-test findings**: SQL injection, clickjacking, OTP brute-force, unsafe file upload
