@@ -8,15 +8,17 @@
  *   GITHUB_TOKEN=... node scripts/build-stats.mjs [username]
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir, readFile, appendFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { fetchUser, renderTopLangs, DEFAULT_ACCENT } from "./render.mjs";
+import { fetchUser, renderTopLangs, sanitizeHex, DEFAULT_ACCENT } from "./render.mjs";
 
 const ASSETS = join(dirname(fileURLToPath(import.meta.url)), "..", "assets");
 
 const username = process.argv[2] || process.env.PROFILE_USERNAME || "kristalynn-devv";
-const accent = process.env.ACCENT || DEFAULT_ACCENT;
+// ACCENT goes straight into the SVG, so anything that is not a plain hex triplet
+// falls back rather than ending up in the markup.
+const accent = sanitizeHex(process.env.ACCENT) || DEFAULT_ACCENT;
 const token = process.env.GITHUB_TOKEN;
 
 if (!token) {
@@ -47,3 +49,8 @@ for (const [name, body] of Object.entries(cards)) {
 }
 
 console.log(changed ? `${changed} card(s) updated` : "nothing to commit");
+
+// The workflow reads this to decide whether the publish step runs at all.
+if (process.env.GITHUB_OUTPUT) {
+  await appendFile(process.env.GITHUB_OUTPUT, `changed=${changed}\n`);
+}

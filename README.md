@@ -137,7 +137,7 @@ row-level-secured to its owner, so a mistake in a component cannot surface someo
 
 **IT Passport Examination (IP)** — Career for the Future Academy × IPA Japan, 2021.
 
-## 📊 Languages
+## Languages
 
 <p align="center">
   <img height="200" src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/stats/assets/top-langs.svg" alt="Top languages"/>

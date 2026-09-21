@@ -28,15 +28,25 @@ jobs:
         with:
           node-version: 22
 
+      # The card lives on the stats branch, not here — pull the current one in so the
+      # render below can tell "nothing changed" from "first run".
+      - name: Fetch the published card
+        run: |
+          git fetch -q --depth=1 origin stats || exit 0
+          mkdir -p assets
+          git show origin/stats:assets/top-langs.svg > assets/top-langs.svg 2>/dev/null || true
+
       - name: Render cards
+        id: render
         env:
-          # GH_STATS_TOKEN is optional: a PAT with read:user also counts private
-          # contributions. Without it the built-in token reports public ones only.
+          # GH_STATS_TOKEN is optional: a PAT with repo scope also counts the
+          # languages in private repos. Without it the card is public repos only.
           GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
           PROFILE_USERNAME: ${{ github.repository_owner }}
         run: node scripts/build-stats.mjs
 
       - name: Publish the cards to the stats branch
+        if: steps.render.outputs.changed != '0'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
