@@ -1,9 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/header.svg" alt="Kristalyn Narongpiyawathana, Full-Stack Developer" width="880"/>
 </p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kristalynn-devv/kristalynn-devv/main/assets/now.svg" alt="now" width="720"/>
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vuedotjs&logoColor=white" height="22"/>
